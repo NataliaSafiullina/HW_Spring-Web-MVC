@@ -1,5 +1,6 @@
 package ru.safiullina.repository;
 
+import org.springframework.stereotype.Repository;
 import ru.safiullina.model.Post;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
-
+@Repository
 public class PostRepositoryImpl implements PostRepository{
 
   protected AtomicLong counter = new AtomicLong();

@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/posts")
 public class PostController {
+
     private final PostService service;
 
     public PostController(PostService service) {
@@ -32,7 +33,7 @@ public class PostController {
     }
 
     @DeleteMapping("/{id}")
-    public void removeById(long id) {
+    public void removeById(@PathVariable long id) {
         service.removeById(id);
     }
 }

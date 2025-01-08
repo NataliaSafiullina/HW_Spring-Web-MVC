@@ -22,8 +22,8 @@ public class Main {
 
         // Настраиваем порты через коннекторы, создаем коннектор
         final var connector = new Connector();
-        // Устанавливаем порт 9999
-        connector.setPort(9999);
+        // Устанавливаем порт
+        connector.setPort(8080);
         // Присваиваем Томкэту коннектор
         tomcat.setConnector(connector);
 

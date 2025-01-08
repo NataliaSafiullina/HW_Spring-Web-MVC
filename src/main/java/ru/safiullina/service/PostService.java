@@ -1,11 +1,13 @@
 package ru.safiullina.service;
 
+import org.springframework.stereotype.Service;
 import ru.safiullina.exception.NotFoundException;
 import ru.safiullina.model.Post;
 import ru.safiullina.repository.PostRepository;
 
 import java.util.List;
 
+@Service
 public class PostService {
   private final PostRepository repository;
 

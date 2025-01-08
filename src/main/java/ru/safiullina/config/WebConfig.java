@@ -9,6 +9,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 public class WebConfig {
     /**
      * Регистрация конвертеров
+     *
      * @return бин
      */
     @Bean

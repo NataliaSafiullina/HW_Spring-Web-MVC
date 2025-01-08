@@ -14,6 +14,7 @@ public class ApplicationInitializer implements WebApplicationInitializer {
      * Spring уже предоставляет готовую реализацию интерфейса SpringServletContainerInitializer,
      * которая ищет уже классы, имплементирующие
      * WebApplicationInitializer и запускает на них метод onStartup.
+     *
      * @param servletContext - получает контекст
      */
     @Override

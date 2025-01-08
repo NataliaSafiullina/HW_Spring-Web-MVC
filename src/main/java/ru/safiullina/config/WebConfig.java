@@ -7,9 +7,14 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 
 @Configuration
 public class WebConfig {
+    /**
+     * Регистрация конвертеров
+     * @return бин
+     */
     @Bean
     public RequestMappingHandlerAdapter requestMappingHandlerAdapter() {
         final var bean = new RequestMappingHandlerAdapter();
+        // Получаем коллекцию конвертеров и добавляем туда GsonHttp конвертер
         bean.getMessageConverters().add(new GsonHttpMessageConverter());
         return bean;
     }

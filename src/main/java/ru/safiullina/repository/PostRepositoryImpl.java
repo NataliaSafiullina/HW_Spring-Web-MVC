@@ -61,7 +61,6 @@ public class PostRepositoryImpl implements PostRepository{
   /**
    * Удаление поста по ID
    * @param id - id поста
-   * @return - сообщение об успешном удалении поста или не удаленном
    */
   public void removeById(long id) {
     // Метод remove() возвращает null, если такой записи нет,

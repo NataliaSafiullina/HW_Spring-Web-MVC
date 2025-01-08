@@ -2,7 +2,7 @@ package ru.safiullina.controller;
 
 import org.springframework.web.bind.annotation.*;
 
-import ru.safiullina.model.Post;
+import ru.safiullina.model.PostDto;
 import ru.safiullina.service.PostService;
 
 import java.util.List;
@@ -22,24 +22,25 @@ public class PostController {
     }
 
     @GetMapping
-    public List<Post> all() {
+    public List<PostDto> all() {
         return service.all();
     }
 
     @GetMapping("/{id}")
-    public Post getById(@PathVariable long id) {
+    public PostDto getById(@PathVariable long id) {
         return service.getById(id);
     }
 
     /**
      * Тут вступают в дело наши конвертеры,
      * тело запроса post парсится в наш объект Post
-     * @param post - тело запроса
+     *
+     * @param postDto - тело запроса
      * @return - вернем созданный пост
      */
     @PostMapping
-    public Post save(@RequestBody Post post) {
-        return service.save(post);
+    public PostDto save(@RequestBody PostDto postDto) {
+        return service.save(postDto);
     }
 
     @DeleteMapping("/{id}")
